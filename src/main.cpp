@@ -1555,7 +1555,7 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 	int64_t nSubsidy = 1 * COIN;
 
   if (pindexBest->nHeight == 1)
-		nSubsidy = 10350000 * COIN;  //Swap amount for Innova Chain v0.12 + Founders Fund 2.25 million
+		nSubsidy = 50000 * COIN;  //Swap amount for Innova Chain v0.12 + Founders Fund 2.25 million
 	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 490, Instamine prevention
         nSubsidy = 0.165 * COIN/2;
 	else if (pindexBest->nHeight <= 5000) //
@@ -3898,10 +3898,10 @@ bool LoadBlockIndex(bool fAllowNew)
 
     if (fTestNet)
     {
-        pchMessageStart[0] = 0x17;
-        pchMessageStart[1] = 0x21;
-        pchMessageStart[2] = 0x15;
-        pchMessageStart[3] = 0x1b;
+        pchMessageStart[0] = 0x19;
+        pchMessageStart[1] = 0x23;
+        pchMessageStart[2] = 0x16;
+        pchMessageStart[3] = 0x1c;
 
         bnProofOfWorkLimit = bnProofOfWorkLimitTestNet; // 16 bits PoW target limit for testnet
         nStakeMinAge = 1 * 60 * 60; // test net min age is 1 hour
@@ -4383,7 +4383,7 @@ void static ProcessGetData(CNode* pfrom)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xfa, 0xf4, 0x3f, 0xb7 };
+unsigned char pchMessageStart[4] = { 0xf6, 0xa1, 0x5f, 0xe7 };
 
 bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, int64_t nTimeReceived)
 {
