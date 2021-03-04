@@ -1557,39 +1557,39 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
   if (pindexBest->nHeight == 1)
 		nSubsidy = 50000 * COIN;  //Swap amount for Innova Chain v0.12 + Founders Fund 2.25 million
 	else if (pindexBest->nHeight <= FAIR_LAUNCH_BLOCK) // Block 490, Instamine prevention
-        nSubsidy = 0.165 * COIN/2;
+        nSubsidy = 25 * COIN/2;
 	else if (pindexBest->nHeight <= 5000) //
-		nSubsidy = 0.33 * COIN;
+		nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 10000) //
-  	nSubsidy = 0.66 * COIN;
+  	nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 15000) //
-    nSubsidy = 0.99 * COIN;
+    nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 20000) //
-  	nSubsidy = 1.32 * COIN;
+  	nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 25000)//
-    nSubsidy = 1.65 * COIN;
+    nSubsidy = 25 * COIN;
 	else if (pindexBest->nHeight <= 27500) //
-		nSubsidy = 1.485 * COIN;
+		nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 30000) //
-  	nSubsidy = 1.32 * COIN;
+  	nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 32500) //
-    nSubsidy = 1.155 * COIN;
+    nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 35000) //
-    nSubsidy = 0.99 * COIN;
+    nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 37500) //
-    nSubsidy = 0.825 * COIN;
+    nSubsidy = 25 * COIN;
 	else if (pindexBest->nHeight <= 40000) //
-		nSubsidy = 0.66 * COIN;
+		nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 42500) //
-  	nSubsidy = 0.495 * COIN;
+  	nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 45000) //
-  	nSubsidy = 0.33 * COIN;
+  	nSubsidy = 25 * COIN;
   else if (pindexBest->nHeight <= 47500) //
-  	nSubsidy = 0.165 * COIN;
-  else if (pindexBest->nHeight <= 50000) //
-  	nSubsidy = 0.0825 * COIN;
+  	nSubsidy = 25 * COIN;
+  else if (pindexBest->nHeight <= 60000000) //
+  	nSubsidy = 25 * COIN;
     else if (pindexBest->nHeight > LAST_POW_BLOCK) // Block 50k
-		nSubsidy = 0; // PoW Ends
+		nSubsidy = 25; // PoW Ends
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
