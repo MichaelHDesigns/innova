@@ -26,7 +26,7 @@ class CValidationState;
 //#define START_FORTUNASTAKE_PAYMENTS_TESTNET 1519430400  //Sat, 24 Feb 2018 00:00:00 GMT
 //#define START_FORTUNASTAKE_PAYMENTS 1520985600  //Wed, 14 Mar 2018 00:00:00 GMT
 
-static const int64_t FORTUNA_COLLATERAL = (25000*COIN); // 25,000 INN
+static const int64_t FORTUNA_COLLATERAL = (5000*COIN); // 5,000 INN
 static const int64_t FORTUNA_FEE = (0.010000*COIN); //0.01 INN
 static const int64_t POOL_FEE_AMOUNT = (0.1*COIN); //0.1 INN
 static const int64_t FORTUNA_POOL_MAX = (51000*COIN); //51,000 INN
@@ -59,8 +59,8 @@ class CNode;
 
 // General Innova Block Values
 
-static const int LAST_POW_BLOCK = 50000; // 50k blocks before Proof of Stake consensus kicks in
-static const int FAIR_LAUNCH_BLOCK = 490; // Last Block until full block reward starts
+static const int LAST_POW_BLOCK = 60000000; // 50k blocks before Proof of Stake consensus kicks in
+static const int FAIR_LAUNCH_BLOCK = 1; // Last Block until full block reward starts
 static const unsigned int MAX_BLOCK_SIZE = 1000000; // 1MB block hard limit, double the size of Bitcoin
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2; // 512kb block soft limit, ditto
 /** The maximum size for transactions we're willing to relay/mine **/
@@ -77,7 +77,7 @@ static const unsigned int MAX_INV_SZ = 50000;
 static const int64_t MIN_TX_FEE = 1000;
 static const int64_t MIN_TX_FEE_ANON = 10000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
-static const int64_t MAX_MONEY = 25000000 * COIN; // 25,000,000 INN Innova Max
+static const int64_t MAX_MONEY = 40000000 * COIN; // 40,000,000 INN Innova Max
 static const int64_t COIN_YEAR_REWARD = 0.06 * COIN; // 6% per year
 
 static const int64_t MAINNET_POSFIX = 500; //Mainnet Proof of Stake update not enabled until block 500
@@ -103,7 +103,7 @@ inline int64_t FutureDrift(int64_t nTime) { return nTime + 10 * 60; } // up to 1
 
 //inline unsigned int GetTargetSpacing(int nHeight) { return IsProtocolV2(nHeight) ? 60 : 60; }
 
-inline int64_t GetMNCollateral() { return 25000; }
+inline int64_t GetMNCollateral() { return 5000; }
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
