@@ -11,7 +11,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get --assume-yes install git unzip build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libevent-dev obfs4proxy
 
 echo "Installing Innova Wallet"
-git clone https://github.com/innova-foundation/innova
+git clone https://github.com/MichaelHDesigns/innova.git
 cd innova || exit
 git checkout master
 git pull
@@ -67,7 +67,7 @@ cd ~
 openssl version -v
 
 echo "Installing Innova Wallet"
-git clone https://github.com/innova-foundation/innova
+git clone https://github.com/MichaelHDesigns/innova.git
 cd innova
 git checkout master
 git pull
