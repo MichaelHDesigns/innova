@@ -68,7 +68,7 @@ parts:
       echo "Linking OpenSSL to 1.0.1j"
       sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
   daemon:
-    source: https://github.com/innova-foundation/innova.git
+    source: https://github.com/MichaelHDesigns/innova.git
     source-type: git
     source-tag: master
     plugin: nil
@@ -133,7 +133,7 @@ parts:
       OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f "${MF}" -j4
       cp $SNAPCRAFT_PART_BUILD/src/innovad $SNAPCRAFT_PART_INSTALL/bin
   innova:
-    source: https://github.com/innova-foundation/innova.git
+    source: https://github.com/MichaelHDesigns/innova.git
     source-type: git
     source-tag: master
     plugin: qmake
